@@ -15,6 +15,13 @@ document.addEventListener("keydown", function(){
   makeAnimation(event.key);
 });
 
+// Detect text in Input tag
+document.querySelector("input").addEventListener("keydown", function() {
+  playSound(event.key);
+  makeAnimation(event.key);
+});
+
+
 function makeAnimation(key){
   document.querySelector("."+key).classList.add("pressed");
   setTimeout(function(){document.querySelector("."+key).classList.remove("pressed");},100);
